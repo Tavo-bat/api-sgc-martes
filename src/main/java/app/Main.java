@@ -1,51 +1,42 @@
 package app;
 
+import models.Courses;
 import models.Students;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        Students student1 = new Students();
-        Students student2 = new Students();
-        Students student3 = new Students();
-        Students student4 = new Students();
-        Students student5 = new Students();
+        List<Students> studentsList = new ArrayList<>();
 
-        student1.setId(1L);
-        student1.setFirstName("Juan");
-        student1.setLastName("Sanchez");
-        student1.setEmail("ejemplo1@correo.com");
-        student1.setPhone("11122223333");
+        
+        studentsList.add(new Students(1L, "Juan", "Sanchez", "ejemplo1@correo.com", "11122223333"));
+        studentsList.add(new Students(2L, "Maria", "Lopez", "ejemplo2@correo.com", "22233334444"));
+        studentsList.add(new Students(3L, "Carlos", "Ramirez", "ejemplo3@correo.com", "33344445555"));
+        studentsList.add(new Students(4L, "Ana", "Martinez", "ejemplo4@correo.com", "44455556666"));
+        studentsList.add(new Students(5L, "Luis", "Gomez", "ejemplo5@correo.com", "55566667777"));
 
-        student2.setId(2L);
-        student2.setFirstName("Maria");
-        student2.setLastName("Lopez");
-        student2.setEmail("ejemplo2@correo.com");
-        student2.setPhone("22233334444");
+        System.out.println("--- Lista Completa de Estudiantes ---");
+        for (Students s : studentsList) {
+            System.out.println("ID: " + s.getId() +
+                               ", Nombre: " + s.getFirstName() +
+                               " " + s.getLastName() +
+                               ", Email: " + s.getEmail() +
+                               ", Teléfono: " + s.getPhone());
+        }
 
-        student3.setId(3L);
-        student3.setFirstName("Carlos");
-        student3.setLastName("Ramirez");
-        student3.setEmail("ejemplo3@correo.com");
-        student3.setPhone("33344445555");
+        System.out.println("\n--- Lista de Cursos Disponibles ---");
 
-        student4.setId(4L);
-        student4.setFirstName("Ana");
-        student4.setLastName("Martinez");
-        student4.setEmail("ejemplo4@correo.com");
-        student4.setPhone("44455556666");
+        List<Courses> coursesList = new ArrayList<>();
 
-        student5.setId(5L);
-        student5.setFirstName("Luis");
-        student5.setLastName("Gomez");
-        student5.setEmail("ejemplo5@correo.com");
-        student5.setPhone("55566667777");
+        coursesList.add(new Courses(101L, "Matemáticas I", "Curso de álgebra y cálculo básico."));
+        coursesList.add(new Courses(102L, "Programación en Java", "Introducción a la programación orientada a objetos con Java."));
+        coursesList.add(new Courses(103L, "Bases de Datos", "Conceptos de bases de datos relacionales y SQL."));
 
-        System.out.println(student1.getFirstName());
-        System.out.println(student2.getFirstName());
-        System.out.println(student3.getFirstName());
-        System.out.println(student4.getFirstName());
-        System.out.println(student5.getFirstName());
-
+        for (Courses course : coursesList) {
+            System.out.println("ID: " + course.getId() + ", Nombre: " + course.getName() + ", Descripción: " + course.getDescription());
+        }
     }
 }

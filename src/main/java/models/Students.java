@@ -8,9 +8,12 @@ public class Students {
     private String email;
     private String phone;
 
+    //Contructor vacio
     public Students()
     {
     }
+
+    //Constructor lleno
     public Students(Long idStudent, String firstNameStudent, String lastNameStudent, String emailStudent, String phoneStudent){
         this.id = idStudent;
         this.firstName = firstNameStudent;
