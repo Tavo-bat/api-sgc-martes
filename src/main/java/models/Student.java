@@ -1,6 +1,6 @@
 package models;
 
-public class Students {
+public class Student {
 
     private Long id;
     private String firstName;
@@ -9,12 +9,12 @@ public class Students {
     private String phone;
 
     //Contructor vacio
-    public Students()
+    public Student()
     {
     }
 
     //Constructor lleno
-    public Students(Long idStudent, String firstNameStudent, String lastNameStudent, String emailStudent, String phoneStudent){
+    public Student(Long idStudent, String firstNameStudent, String lastNameStudent, String emailStudent, String phoneStudent){
         this.id = idStudent;
         this.firstName = firstNameStudent;
         this.lastName = lastNameStudent;
@@ -34,31 +34,32 @@ public class Students {
         return firstName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 }

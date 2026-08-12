@@ -1,18 +1,18 @@
 package models;
 
-public class Enrollments {
+public class Enrollment {
 
     private Long id;
     private Long studentId;
     private Long courseId;
 
     //Contructor vacio
-    public Enrollments() {
+    public Enrollment() {
     }
 
     //Constructor lleno
-    public Enrollments(Long id, Long studentId, Long courseId) {
-        this.id = id;
+    public Enrollment(Long enrollmentId, Long studentId, Long courseId) {
+        this.id = enrollmentId;
         this.studentId = studentId;
         this.courseId = courseId;
     }

@@ -1,20 +1,20 @@
 package models;
 
-public class Courses {
+public class Course {
 
     private Long id;
     private String name;
     private String description;
 
     // Constructor vacío
-    public Courses() {
+    public Course() {
     }
 
     // Constructor lleno
-    public Courses(Long id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
+    public Course(Long idCourse, String nameCourse, String descriptionCourse) {
+        this.id = idCourse;
+        this.name = nameCourse;
+        this.description = descriptionCourse;
     }
 
     public Long getId() {
