@@ -1,4 +1,4 @@
-|package data;
+package data;
 
 import models.Course;
 import models.Enrollment;

@@ -1,5 +1,6 @@
 package app;
 
+import data.DataStore;
 import models.Course;
 import models.Enrollment;
 import models.Student;
@@ -7,43 +8,30 @@ import models.Student;
 public class Main {
     public static void main(String[] args) {
 
-        studentsList.add(new Student(1L, "Juan", "Sanchez", "ejemplo1@correo.com", "11122223333"));
-        studentsList.add(new Student(2L, "Maria", "Lopez", "ejemplo2@correo.com", "22233334444"));
-        studentsList.add(new Student(3L, "Carlos", "Ramirez", "ejemplo3@correo.com", "33344445555"));
-        studentsList.add(new Student(4L, "Ana", "Martinez", "ejemplo4@correo.com", "44455556666"));
-        studentsList.add(new Student(5L, "Luis", "Gomez", "ejemplo5@correo.com", "55566667777"));
+        DataStore dataStore = new DataStore();
 
-        System.out.println("--- Lista Completa de Estudiantes ---");
-        for (Student s : studentsList) {
+        dataStore.addStudent(new Student(1L, "Juan", "Sanchez", "ejemplo1@correo.com", "11122223333"));
+
+        dataStore.getAllStudents().forEach(s -> {
             System.out.println("ID: " + s.getId() +
                     ", Nombre: " + s.getFirstName() +
                     " " + s.getLastName() +
                     ", Email: " + s.getEmail() +
                     ", Teléfono: " + s.getPhone());
-        }
+        });
 
-        coursesList.add(new Course(101L, "Matemáticas I", "Curso de álgebra y cálculo básico."));
-        coursesList.add(new Course(102L, "Programación en Java", "Introducción a la programación orientada a objetos con Java."));
-        coursesList.add(new Course(103L, "Bases de Datos", "Conceptos de bases de datos relacionales y SQL."));
+        dataStore.addCourse(new Course(101L, "Matemáticas I", "Curso de álgebra y cálculo básico."));
 
-        System.out.println("\n--- Lista de Cursos Disponibles ---");
-
-        for (Course course : coursesList) {
+        dataStore.getAllCourses().forEach(course -> {
             System.out.println("ID: " + course.getId() + ", Nombre: " + course.getName() + ", Descripción: "
                     + course.getDescription());
-        }
+        });
 
-        enrollmentsList.add(new Enrollment(1L, 1L, 102L));
-        enrollmentsList.add(new Enrollment(2L, 2L, 101L));
-        enrollmentsList.add(new Enrollment(3L, 3L, 103L));
-        enrollmentsList.add(new Enrollment(4L, 1L, 103L));
-        enrollmentsList.add(new Enrollment(5L, 5L, 102L));
+        dataStore.addEnrollment(new Enrollment(1L, 1L, 102L));
 
-        System.out.println("\n--- Lista de Matrículas ---");
-        for (Enrollment enrollment : enrollmentsList) {
+        dataStore.getAllEnrollments().forEach(enrollment -> {
             System.out.println("ID Matrícula: " + enrollment.getId() + ", ID Estudiante: " + enrollment.getStudentId()
                     + ", ID Curso: " + enrollment.getCourseId());
-        }
-
+        });
     }
 }
