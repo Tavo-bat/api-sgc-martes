@@ -13,12 +13,12 @@ public class Main {
         dataStore.addStudent(new Student(1L, "Juan", "Sanchez", "ejemplo1@correo.com", "11122223333"));
         dataStore.addStudent(new Student(2L, "Maria", "Lopez", "ejemplo2@correo.com", "22233334444"));
 
-        dataStore.getAllStudents().forEach(s -> {
-            System.out.println("ID: " + s.getId() +
-                    ", Nombre: " + s.getFirstName() +
-                    " " + s.getLastName() +
-                    ", Email: " + s.getEmail() +
-                    ", Teléfono: " + s.getPhone());
+        dataStore.getAllStudents().forEach(student -> {
+            System.out.println("ID: " + student.getId() +
+                    ", Nombre: " + student.getFirstName() +
+                    " " + student.getLastName() +
+                    ", Email: " + student.getEmail() +
+                    ", Teléfono: " + student.getPhone());
         });
 
         dataStore.addCourse(new Course(101L, "Matemáticas I", "Curso de álgebra y cálculo básico."));

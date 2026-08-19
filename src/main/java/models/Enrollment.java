@@ -40,4 +40,14 @@ public class Enrollment {
     public void setCourseId(Long courseId) {
         this.courseId = courseId;
     }
+
+    @Override
+    public String toString() {
+        return "Enrollment{" +
+                "id=" + id +
+                ", studentId=" + studentId +
+                ", courseId=" + courseId +
+                '}';
+    }
 }
+
