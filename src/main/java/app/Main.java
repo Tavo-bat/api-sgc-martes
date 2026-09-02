@@ -1,14 +1,26 @@
 package app;
 
+import app.cosole.StudentConsole;
 import data.DataStore;
 import models.Course;
 import models.Enrollment;
 import models.Student;
+import repositories.StudentRepository;
+import repositories.impl.StudentRepositoryImpl;
+import service.StudentService;
+import service.impl.StudentServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
 
-        DataStore dataStore = new DataStore();
+        StudentRepository studentRepository = new StudentRepositoryImpl(DataStore.getAllStudents());
+        StudentService studentService = new StudentServiceImpl(studentRepository);
+        StudentConsole studentConsole = new StudentConsole(studentService);
+
+        studentConsole.createStudent();
+        studentConsole.studentList();
+
+        /*
 
         dataStore.addStudent(new Student(1L, "Juan", "Sanchez", "ejemplo1@correo.com", "11122223333"));
         dataStore.addStudent(new Student(2L, "Maria", "Lopez", "ejemplo2@correo.com", "22233334444"));
@@ -35,6 +47,6 @@ public class Main {
         dataStore.getAllEnrollments().forEach(enrollment -> {
             System.out.println("ID Matrícula: " + enrollment.getId() + ", ID Estudiante: " + enrollment.getStudentId()
                     + ", ID Curso: " + enrollment.getCourseId());
-        });
+        });*/
     }
 }

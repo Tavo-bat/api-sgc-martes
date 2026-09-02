@@ -9,17 +9,26 @@ import java.util.List;
 
 public class DataStore {
 
-        private final List<Student> studentsList;
-        private final List<Course> courseList;
-        private final List<Enrollment> enrollmentList;
+        private static final List<Student> studentsList = new ArrayList<>();
+        private static final List<Course> courseList  = new ArrayList<>();
+        private static final List<Enrollment> enrollmentList = new ArrayList<>();
 
-        public DataStore(){
-            studentsList = new ArrayList<>();
-            courseList =  new ArrayList<>();
-            enrollmentList = new ArrayList<>();
+        public static List<Student> getAllStudents(){
+            return studentsList;
         }
 
-        public List<Student> getAllStudents(){
+        public static List<Course> getAllCourses(){
+            return courseList;
+        }
+
+        public static List<Enrollment> getAllEnrollments(){
+            return enrollmentList;
+        }
+
+        public DataStore(){
+        }
+/*
+        public static List<Student> getAllStudents(){
             return studentsList;
         }
 
@@ -91,5 +100,5 @@ public class DataStore {
         if (enrollment != null) {
             enrollmentList.remove(enrollment);
         }
-    }
+    }*/
 }
