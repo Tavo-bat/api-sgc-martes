@@ -1,10 +1,7 @@
 package app;
 
-import app.cosole.StudentConsole;
+import app.console.StudentConsole;
 import data.DataStore;
-import models.Course;
-import models.Enrollment;
-import models.Student;
 import repositories.StudentRepository;
 import repositories.impl.StudentRepositoryImpl;
 import service.StudentService;

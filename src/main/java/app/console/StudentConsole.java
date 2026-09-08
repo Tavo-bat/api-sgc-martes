@@ -1,4 +1,4 @@
-package app.cosole;
+package app.console;
 
 import models.Student;
 import service.StudentService;
@@ -40,6 +40,6 @@ public class StudentConsole {
 
     public void studentList(){
         List<Student> students = studentService.findAll();
-        students.forEach(System.out::print);
+        students.forEach(System.out::println);
     }
 }
