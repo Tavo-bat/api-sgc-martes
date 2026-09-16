@@ -1,10 +1,10 @@
-package service;
+package org.example.apisgcmartes.repositories;
 
-import models.Enrollment;
+import org.example.apisgcmartes.models.Enrollment;
 
 import java.util.List;
 
-public interface EnrollmentService {
+public interface EnrollmentRepository {
 
     void save(Enrollment enrollment);
     Enrollment findById(Long id);

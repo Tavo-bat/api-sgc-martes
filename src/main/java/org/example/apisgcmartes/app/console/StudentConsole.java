@@ -1,7 +1,7 @@
-package app.console;
+package org.example.apisgcmartes.app.console;
 
-import models.Student;
-import service.StudentService;
+import org.example.apisgcmartes.models.Student;
+import org.example.apisgcmartes.service.StudentService;
 
 import java.util.List;
 import java.util.Scanner;

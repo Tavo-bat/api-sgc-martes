@@ -1,7 +1,7 @@
-package repositories.impl;
+package org.example.apisgcmartes.repositories.impl;
 
-import models.Enrollment;
-import repositories.EnrollmentRepository;
+import org.example.apisgcmartes.models.Enrollment;
+import org.example.apisgcmartes.repositories.EnrollmentRepository;
 
 import java.util.List;
 

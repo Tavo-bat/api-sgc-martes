@@ -1,8 +1,8 @@
-package service.impl;
+package org.example.apisgcmartes.service.impl;
 
-import models.Enrollment;
-import repositories.EnrollmentRepository;
-import service.EnrollmentService;
+import org.example.apisgcmartes.models.Enrollment;
+import org.example.apisgcmartes.repositories.EnrollmentRepository;
+import org.example.apisgcmartes.service.EnrollmentService;
 
 import java.util.List;
 

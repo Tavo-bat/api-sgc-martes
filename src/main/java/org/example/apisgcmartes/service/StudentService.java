@@ -1,6 +1,6 @@
-package service;
+package org.example.apisgcmartes.service;
 
-import models.Student;
+import org.example.apisgcmartes.models.Student;
 
 import java.util.List;
 

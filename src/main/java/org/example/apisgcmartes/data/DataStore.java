@@ -1,8 +1,8 @@
-package data;
+package org.example.apisgcmartes.data;
 
-import models.Course;
-import models.Enrollment;
-import models.Student;
+import org.example.apisgcmartes.models.Course;
+import org.example.apisgcmartes.models.Enrollment;
+import org.example.apisgcmartes.models.Student;
 
 import java.util.ArrayList;
 import java.util.List;

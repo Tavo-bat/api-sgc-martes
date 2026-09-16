@@ -1,11 +1,11 @@
-package app;
+package org.example.apisgcmartes.app;
 
-import app.console.StudentConsole;
-import data.DataStore;
-import repositories.StudentRepository;
-import repositories.impl.StudentRepositoryImpl;
-import service.StudentService;
-import service.impl.StudentServiceImpl;
+import org.example.apisgcmartes.app.console.StudentConsole;
+import org.example.apisgcmartes.data.DataStore;
+import org.example.apisgcmartes.repositories.StudentRepository;
+import org.example.apisgcmartes.repositories.impl.StudentRepositoryImpl;
+import org.example.apisgcmartes.service.StudentService;
+import org.example.apisgcmartes.service.impl.StudentServiceImpl;
 
 public class Main {
     public static void main(String[] args) {

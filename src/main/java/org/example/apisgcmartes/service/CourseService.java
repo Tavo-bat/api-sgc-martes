@@ -1,11 +1,10 @@
-package repositories;
+package org.example.apisgcmartes.service;
 
-import models.Course;
+import org.example.apisgcmartes.models.Course;
 
 import java.util.List;
 
-public interface CourseRepository {
-
+public interface CourseService{
     void save(Course course);
     Course findById(Long id);
     void deleteById(Long id);

@@ -1,4 +1,4 @@
-package models;
+package org.example.apisgcmartes.models;
 
 public class Course {
 
