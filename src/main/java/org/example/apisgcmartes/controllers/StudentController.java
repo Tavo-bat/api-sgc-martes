@@ -1,11 +1,9 @@
 package org.example.apisgcmartes.controllers;
 
 import org.example.apisgcmartes.models.Student;
+import org.example.apisgcmartes.repositories.StudentRepository;
 import org.example.apisgcmartes.service.StudentService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +23,15 @@ public class StudentController {
     @GetMapping
     public List<Student> findAll(){
         return studentService.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Student findById(Long id){
+        return studentService.findById(id);
+    }
+
+    @DeleteMapping ("/{id}")
+    public void deleteById(Long id){
+        studentService.deleteById(id);
     }
 }
