@@ -2,9 +2,10 @@ package org.example.apisgcmartes.repositories.impl;
 
 import org.example.apisgcmartes.models.Student;
 import org.example.apisgcmartes.repositories.StudentRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class StudentRepositoryImpl implements StudentRepository {
 
     private final List<Student> studentsList;

@@ -3,9 +3,10 @@ package org.example.apisgcmartes.service.impl;
 import org.example.apisgcmartes.models.Student;
 import org.example.apisgcmartes.repositories.StudentRepository;
 import org.example.apisgcmartes.service.StudentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
